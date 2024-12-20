@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import {
+  Check,
   Iconoir,
+  IconoirProvider,
   Medal1st,
   Medal1stSolid,
-  IconoirProvider,
-  Check,
 } from '@iconoir/vue';
 </script>
 
@@ -21,8 +21,6 @@ import {
       'height': '2em',
     }"
   >
-    <SomeOtherContainer>
-      <Check />
-    </SomeOtherContainer>
+    <Check />
   </IconoirProvider>
 </template>

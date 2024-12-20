@@ -16,29 +16,9 @@
 
 ## Usage
 
-### Vue 3
-
-```js
+```html
 <script setup>
   import { Iconoir } from '@iconoir/vue';
-</script>
-
-<template>
-  <Iconoir />
-</template>
-```
-
-### Vue 2
-
-```js
-<script>
-  import { Iconoir } from '@iconoir/vue';
-
-  export default
-      components: {
-          Iconoir
-      }
-  }
 </script>
 
 <template>
@@ -50,7 +30,7 @@
 
 Icons can take any standard SVG properties as optional props, e.g.
 
-```jsx
+```html
 <Iconoir color="red" height="36" width="36" />
 ```
 
@@ -67,9 +47,9 @@ Default values for the most common props are given below:
 
 Tired of specifying the same props for every single icon, every time you use them? So were we. Use IconoirProvider to set the default icon props for everything inside IconoirProvider.
 
-```js
+```html
 <script setup>
-import { IconoirProvider, Check } from '@iconoir/vue';
+  import { IconoirProvider, Check } from '@iconoir/vue';
 </script>
 
 <template>
@@ -88,6 +68,6 @@ import { IconoirProvider, Check } from '@iconoir/vue';
 </template>
 ```
 
-## Icon names
+## Icon Names
 
 The Vue components are named as PascalCase variations of their reference names (i.e. `airplane-helix-45deg` becomes `AirplaneHelix45deg`).

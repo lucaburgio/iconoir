@@ -1,7 +1,8 @@
-import { Listr } from 'listr2';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import process from 'node:process';
 import { fileURLToPath } from 'node:url';
+import { Listr } from 'listr2';
 import { pascalCase, snakeCase } from 'scule';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -40,6 +41,8 @@ const targets = {
     path: 'packages/iconoir-vue',
   },
 };
+
+const cliTargets = [];
 
 const tasks = new Listr(
   [
@@ -113,8 +116,6 @@ const tasks = new Listr(
     },
   },
 );
-
-const cliTargets = [];
 
 // Get targets from command line arguments
 // (build all targets if no arguments given)

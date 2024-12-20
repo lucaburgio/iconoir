@@ -1,3 +1,4 @@
-import type { InjectionKey, SVGAttributes } from 'vue-demi';
-const providerKey = Symbol() as InjectionKey<SVGAttributes>;
+import type { InjectionKey, Ref, SVGAttributes } from 'vue';
+
+const providerKey = Symbol('IconoirProvider') as InjectionKey<Ref<SVGAttributes>>;
 export default providerKey;

@@ -1,7 +1,15 @@
 import ts from 'typescript';
 import * as pathlib from 'path';
 
+/**
+ *
+ * @param {string} path
+ * @param {string} content
+ * @param {import('types-tsconfig').TSConfigJSON['compilerOptions']} options
+ */
 export function getDts(path, content, options) {
+  options = ts.convertCompilerOptionsFromJson(options, '').options;
+
   let output;
 
   const host = ts.createCompilerHost(options);
@@ -40,6 +48,7 @@ export function getDts(path, content, options) {
         diagnostic.file,
         diagnostic.start,
       );
+
       const message = ts.flattenDiagnosticMessageText(
         diagnostic.messageText,
         '\n',

@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import { provide } from 'vue-demi';
-import type { SVGAttributes } from 'vue-demi';
+import type { SVGAttributes } from 'vue';
+import { provide, toRef } from 'vue';
 import providerKey from './providerKey';
-interface Props {
+
+const props = defineProps<{
   iconProps: SVGAttributes;
-}
-const props = defineProps<Props>();
-provide(providerKey, props.iconProps);
+}>();
+
+const iconProps = toRef(props, 'iconProps');
+
+provide(providerKey, iconProps);
 </script>
+
 <template>
   <slot />
 </template>
