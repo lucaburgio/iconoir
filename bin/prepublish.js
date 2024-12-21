@@ -18,6 +18,7 @@ if (!newVersion) {
 publishNpmPackage('iconoir');
 publishNpmPackage('iconoir-react');
 publishNpmPackage('iconoir-react-native');
+publishNpmPackage('iconoir-solid-js');
 publishNpmPackage('iconoir-vue');
 publishPubPackage('iconoir-flutter');
 
